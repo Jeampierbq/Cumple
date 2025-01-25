@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"); /* Fuente Hello Kitty */
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap"); /* Mantén esta si prefieres combinar fuentes */
+
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: radial-gradient(circle farthest-corner, hsl(340, 100%, 95%), hsl(340, 75%, 80%) 100%);
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: "Gloria Hallelujah", cursive;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  color: #ff69b4; /* Color rosa brillante */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: max(35px, 7vw);
+  background: linear-gradient(to right, #a90959, #ff1271, #ff56ae);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Esto hace el degradado visible */
+  text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.5); /* Sombra rosa suave */
+  font-family: "Gloria Hallelujah", cursive; /* Fuente estilo Hello Kitty */
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+/* Asegúrate de que la imagen se adapte al tamaño de la pantalla */
+.hello-kitty-img {
+  width: 30%; /* Reduce el tamaño de la imagen al 80% del contenedor */
+  height: auto; /* Mantén la proporción de la imagen */
+  max-width: 300px; /* Limita el tamaño máximo de la imagen */
+  margin: 10px 0; /* Espacio alrededor de la imagen */
+  background: transparent; /* Asegura que el fondo sea transparente */
+}
+
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.audio-container,
+.letter-container {
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  background-color: #ff85c5; /* Rosa claro */
+  color: white;
+  border: 2px solid #ff69b4; /* Borde rosa brillante */
+  border-radius: 10px;
+  font-family: "Gloria Hallelujah", cursive;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+  z-index: 1;
+}
+
+.btn:hover {
+  background-color: #ff69b4; /* Rosa brillante al pasar el mouse */
+  transform: scale(1.1);
+}
+
+.btn:active {
+  background-color: #ff1493; /* Rosa intenso */
+  transform: scale(1);
+}
+
+/* Modal estilos */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+  background-color: #fff0f5; /* Fondo rosa claro */
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #ff69b4;
+  width: 80%;
+  max-width: 600px;
+  color: #ff1493;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+}
+
+.modal-content h2 {
+  color: #ff69b4;
+  text-align: center;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.modal-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ff85c5;
+}
+
+.close {
+  color: #ff69b4;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff1493;
+  text-decoration: none;
+}
+
+/* Mejorar la responsividad general */
+@media (max-width: 768px) {
+  /* Para pantallas pequeñas, ajustamos la imagen aún más */
+  .hello-kitty-img {
+    max-width: 300px; /* Reduce más el tamaño de la imagen */
+  }
+
+  h1 {
+    font-size: max(25px, 5vw); /* Ajusta aún más el tamaño del texto */
+  }
+
+  .btn {
+    padding: 12px 24px; /* Un poco más pequeño en pantallas pequeñas */
+    font-size: 1.2em; /* Ajusta el tamaño de fuente */
+  }
+
+  /* Ajustar márgenes en el modal */
+  .modal-content {
+    width: 95%; /* Asegura que el modal ocupe casi todo el ancho */
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para pantallas muy pequeñas como celulares en vertical */
+  h1 {
+    font-size: max(20px, 4vw); /* Hacer los títulos más pequeños */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Botones aún más pequeños */
+    font-size: 0.9em; /* Reducir aún más el tamaño del texto */
+  }
+
+  .modal-content {
+    width: 100%; /* Modal ocupa el 100% */
+    padding: 8px; /* Reducir padding en pantallas ultra pequeñas */
+  }
+}

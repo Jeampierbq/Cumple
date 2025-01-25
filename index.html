@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz cumpleaños Yuliza</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <br>
+<div class="container">
+  <h1>Feliz Cumpleaños</h1>
+  <img src="https://freepnglogo.com/images/all_img/1718884189hello-kitty-png-stickers.png" alt="Hello Kitty"
+    class="hello-kitty-img">
+  <h1> &#10084; Yuliza &#10084;&#65039;</h1>
+</div>
+
+
+  <!-- Botón y audio -->
+  <div class="audio-container">
+    <button id="playAudioButton" class="btn">🎵 ¡FELICIDADES! 🎉</button>
+    <audio id="birthdayAudio" src="bdayaudio.mp3"></audio>
+  </div>
+
+  <!-- Botón para abrir la carta -->
+  <div class="letter-container">
+    <button id="openLetterButton" class="btn">💌 Ver mi Carta para Ti 💌</button>
+  </div>
+
+  <!-- Modal para la carta -->
+  <div id="letterModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Para mi querida Yuliza ❤️</h2>
+      <p>
+        ¡Feliz cumpleaños, Yuliza! Hoy quiero aprovechar este día especial para agradecerte por ser tan increíble. Cada momento que compartimos, cada risa y cada conversación, han sido una gran bendición en mi vida.
+      </p>
+      
+      <p>
+        Eres una persona excepcional, llena de luz y energía, y estoy muy agradecido de poder contar con tu amistad y por soportarme jajaja :3. En tu cumpleaños, quiero desearte todo lo mejor: que sigas alcanzando tus sueños, que la felicidad te acompañe siempre y que tengas un año lleno de experiencias inolvidables.
+      </p>
+      
+      <p>
+        Gracias por ser como eres, por ser tan auténtica y por brindarme tu apoyo cuando lo necesito. ¡Te mereces todo lo mejor en este día y siempre! 🎉❤️
+      </p>
+      <p>Con todo mi cariño, Te quiero :3</p>
+    </div>
+  </div>
+  
+  
+
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"
+    crossorigin="anonymous"></script>
+  <script type="importmap">
+    {
+      "imports": {      
+        "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
